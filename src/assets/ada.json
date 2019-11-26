@@ -1,0 +1,77 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "João",
+            "email": "joao@gmail.com",
+            "teacher": false,
+            "password": "12345",
+            "avatar_url": "https://api.adorable.io/avatars/285/abott@adorable.png"
+        },
+        {
+            "name": "Maciel",
+            "email": "maciel@gmail.com",
+            "teacher": false,
+            "password": "12345",
+            "avatar_url": "https://api.adorable.io/avatars/285/abott@adorable.png",
+            "id": 2
+        },
+        {
+            "name": "Marcone",
+            "email": "marcone@gmail.com",
+            "teacher": true,
+            "password": "12345",
+            "avatar_url": "https://api.adorable.io/avatars/285/abott@adorable.png",
+            "id": 3
+        },
+        {
+            "name": "Felipe Marinho",
+            "email": "felipe@gmail.com",
+            "teacher": false,
+            "password": "12345",
+            "avatar_url": "https://api.adorable.io/avatars/285/abott@adorable.png",
+            "id": 4
+        }
+    ],
+    "courses": [
+        {
+            "id": 1,
+            "name": "Lógica de programação",
+            "description": "Teste",
+            "teacher": {
+                "id": 1,
+                "name": "Felipe"
+            },
+            "powered_by": "Rocketseat",
+            "stars": 1,
+            "students": [
+                {
+                    "id": 1
+                }
+            ],
+            "posts": [
+                {
+                    "id": 1,
+                    "date": "2019-11-26T18:00:00-03:00",
+                    "title": "teste",
+                    "message": "teste",
+                    "content_url": "https://www.youtube.com/watch?v=DDm0M_rZLJo",
+                    "author": {
+                        "id": 1
+                    },
+                    "comments": [
+                        {
+                            "id": 1,
+                            "date": "2019-11-26T18:10:00-03:00",
+                            "message": "teste",
+                            "content_url": "https://www.youtube.com/watch?v=DDm0M_rZLJo",
+                            "author": {
+                                "id": 1
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

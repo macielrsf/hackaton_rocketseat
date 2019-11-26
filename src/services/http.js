@@ -8,6 +8,6 @@ instance.defaults.headers.common.responseType = 'json';
 instance.defaults.headers.post['Content-Type'] = 'application/json';
 
 // Custom
-instance.defaults.baseURL = 'http://frontendtest.aurum.com.br:3000/';
+instance.defaults.baseURL = 'http://localhost';
 
 export default instance;

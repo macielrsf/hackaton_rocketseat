@@ -4,10 +4,14 @@ import {
     Text,
     StyleSheet,
     TouchableOpacity,
+    Image,
+    ScrollView,
     Dimensions
 } from 'react-native';
 import { withNavigation } from 'react-navigation';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+
+import companyMap from '~/assets/companies';
 
 const { width } = Dimensions.get('window');
 
@@ -19,7 +23,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.3,
         shadowRadius: 3.0,
         borderRadius: 8,
-        height: 250,
+        height: 300,
         margin: 20,
         elevation: 5,
         flex: 1
@@ -29,7 +33,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
     header: {
-        flex: 1
+        flex: 0
     },
     content: {
         paddingVertical: 20,
@@ -62,6 +66,7 @@ const styles = StyleSheet.create({
     buttonText: {
         fontSize: 16,
         color: 'dodgerblue',
+        fontWeight: 'bold'
     }
 });
 
@@ -131,16 +136,23 @@ class Course extends Component {
                             {this._renderStars()}
                         </View>
                     </View>
-                    <View style={styles.content}>
+                    <ScrollView style={styles.content}>
                         <Text style={styles.general}>
                             {course.description}
                         </Text>
                         {this._renderField('Oferecido por: ', course.powered_by)}
                         {this._renderField('Postado por: ', course.teacher.name)}
-                    </View>
+                        <View style={{ alignItems: 'flex-end', paddingVertical: 10 }}>
+                            <Image
+                                resizeMode="contain"
+                                source={companyMap[course.powered_by_avatar]}
+                                style={{ width: 100, height: 40 }}
+                            />
+                        </View>
+                    </ScrollView>
                     <View style={styles.footer}>
                         {this._renderSubscribe()}
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('UserCourses')}>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('CourseItem', { item: course })}>
                             <Text style={styles.buttonText}>VER CONTEÚDO</Text>
                         </TouchableOpacity>
                     </View>

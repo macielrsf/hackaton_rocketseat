@@ -37,7 +37,8 @@ const HomeStack = createBottomTabNavigator({
 );
 
 const AppStack = createStackNavigator({
-    Home: HomeStack
+    Home: HomeStack,
+    CourseItem: Screens.CourseItem, 
 }, {
     initialRouteName: 'Home'
 });

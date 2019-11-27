@@ -1,6 +1,7 @@
 import * as types from '../constants';
 
 const INITIAL_STATE = {
+    loading_login: false,
     user: null,
     password: null
 }
@@ -17,6 +18,12 @@ export default (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 password: action.password
+            }
+        }
+        case types.LOADING_LOGIN: {
+            return {
+                ...state,
+                loading_login: action.payload
             }
         }
         default: 

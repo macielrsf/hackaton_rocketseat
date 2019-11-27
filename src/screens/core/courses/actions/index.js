@@ -9,14 +9,16 @@ export const load = () => {
             payload: true
         });
 
-        let url = `${http.defaults.baseURL}lawsuit/all`;
+        let url = `${http.defaults.baseURL}courses`;
 
         http.get(url)
             .then(res => {
-                if ( res.data.courses && res.data.courses.length > 0 ) {
+                console.warn(res.data);
+
+                if ( res.data && res.data.length > 0 ) {
                     dispatch( {
                         type: types.COURSES_LOADED,
-                        payload: res.data.courses
+                        payload: res.data
                     });
                 }
 

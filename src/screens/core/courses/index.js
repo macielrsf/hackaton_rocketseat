@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import {
     View,
+    Text,
     Button,
     StyleSheet,
     ActivityIndicator,
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
     title: {
-        fontSize: 33,
+        fontSize: 24,
         fontWeight: 'bold'
     },
     divider: {
@@ -66,7 +67,7 @@ const styles = StyleSheet.create({
 class Courses extends Component {
 
     componentDidMount() {
-        this.props.load();
+        //this.props.load();
     }
 
     _renderItem = ({ item, idx }) => {
@@ -123,7 +124,11 @@ class Courses extends Component {
             <AContainer>
                 <AHeader>
                     <View style={styles.header}>
-                        <View />
+                        <View>
+                            <Text style={styles.title}>
+                                ADA
+                            </Text>
+                        </View>
                         <View>
                             <Icon name="add" color="dodgerblue" size={30} />
                         </View>

@@ -4,3 +4,4 @@ export AInput from './input';
 export ATabBarButton from './tab_bar';
 export AHeader from './header';
 export AText from './text';
+export ACard from './card';

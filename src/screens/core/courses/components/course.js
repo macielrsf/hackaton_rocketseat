@@ -141,7 +141,6 @@ class Course extends Component {
                             {course.description}
                         </Text>
                         {this._renderField('Oferecido por: ', course.powered_by)}
-                        {this._renderField('Postado por: ', course.teacher.name)}
                         <View style={{ alignItems: 'flex-end', paddingVertical: 10 }}>
                             <Image
                                 resizeMode="contain"

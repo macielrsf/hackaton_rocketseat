@@ -148,7 +148,6 @@ export default class CourseItem extends Component {
                             </Text>
                         </View>
                         {this._renderField('Oferecido por: ', this.state.item.powered_by)}
-                        {this._renderField('Postado por: ', this.state.item.teacher.name)}
                     </View>
                     <Text style={[styles.title, { paddingVertical: 20 }]}>
                         Links
